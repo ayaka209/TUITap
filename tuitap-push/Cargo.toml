@@ -1,0 +1,18 @@
+[package]
+name = "tuitap-push"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Pluggable outbound/inbound channel adapters (ntfy, Bark, Telegram, Pushover)"
+
+[dependencies]
+reqwest     = { version = "0.12", features = ["json"] }
+tokio       = { workspace = true }
+serde       = { workspace = true }
+serde_json  = { workspace = true }
+thiserror   = { workspace = true }
+tracing     = { workspace = true }
+async-trait = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true }

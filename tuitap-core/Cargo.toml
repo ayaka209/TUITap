@@ -1,0 +1,22 @@
+[package]
+name = "tuitap-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "PTY capture, VT state-machine parsing, screen-buffer reconstruction and noise filtering"
+
+[dependencies]
+portable-pty  = "0.8"
+vte           = "0.13"
+regex         = { workspace = true }
+serde         = { workspace = true }
+serde_json    = { workspace = true }
+thiserror     = { workspace = true }
+tracing       = { workspace = true }
+tokio         = { workspace = true }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+tokio = { workspace = true }

@@ -1,0 +1,23 @@
+[package]
+name = "tuitap-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "End-user CLI binary: tuitap run / tuitap attach"
+
+[[bin]]
+name = "tuitap"
+path = "src/main.rs"
+
+[dependencies]
+tuitap-core    = { path = "../tuitap-core" }
+tuitap-gateway = { path = "../tuitap-gateway" }
+tuitap-push    = { path = "../tuitap-push" }
+clap               = { version = "4", features = ["derive"] }
+tokio              = { workspace = true }
+serde              = { workspace = true }
+serde_json         = { workspace = true }
+thiserror          = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
+toml               = "0.8"
