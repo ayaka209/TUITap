@@ -94,7 +94,7 @@ impl Channel for TelegramChannel {
 
     async fn send(&self, message: &OutboundMessage) -> Result<(), PushError> {
         let text = match &message.title {
-            Some(t) => format!("**{}**\n{}", t, message.body),
+            Some(t) => format!("{}\n\n{}", t, message.body),
             None => message.body.clone(),
         };
         let req = SendMessageRequest {
