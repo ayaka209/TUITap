@@ -1,0 +1,21 @@
+[package]
+name = "tuitap-gateway"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Central hub: trust model, approval gates, event-driven dispatch"
+
+[dependencies]
+tuitap-core = { path = "../tuitap-core" }
+tuitap-push = { path = "../tuitap-push" }
+tokio       = { workspace = true }
+serde       = { workspace = true }
+serde_json  = { workspace = true }
+thiserror   = { workspace = true }
+tracing     = { workspace = true }
+uuid        = { workspace = true }
+async-trait = { workspace = true }
+regex       = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true }
